@@ -1,0 +1,271 @@
+/*    (Intro) */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro__content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.intro__content p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+#enterBtn {
+  background: var(--text-main);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+  background-size: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.intro__content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.intro__badge {
+  background: #dffca1;
+  color: #094020;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  color: #094020;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #475569;
+}
+
+.highlight {
+  color: #094020;
+  font-weight: bold;
+  font-family: "YekanBakhBold", Tahoma, sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: 0 80%;
+  padding: 0 5px;
+  font-weight: 100;
+}
+
+#enterBtn {
+  margin-top: 40px;
+  background: #094020;
+  color: #dffca1;
+  padding: 16px 40px;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(9, 64, 32, 0.2);
+}
+
+#enterBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(9, 64, 32, 0.3);
+  background: #0c5a2d;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: waving 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes waving {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+}
+
+/*    (Intro) */
+
+/* دکمه منوی تسک */
+.menu-btn {
+  background: var(--accent-green);
+  color: var(--dark-green);
+  padding: 8px 21px;
+  font-weight: bold;
+  font-family: "YekanBakhBold", Tahoma, sans-serif;
+  font-size: 16px;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+  gap: 4px;
+  transition: transform 0.2s;
+}
+
+.menu-btn:active {
+  transform: scale(0.95);
+}
+
+/* همبرگر منو */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--dark-green);
+  border-radius: 2px;
+}
+
+.header__name {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.task-menu {
+  position: absolute;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.task-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.task-menu button {
+   padding: 8px 21px;
+
+  text-align: right;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.task-menu button:hover {
+  background: var(--bg-color);
+  color: var(--dark-green);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* جابجایی دو طرف */
+  align-items: center;
+  height: 80px;
+  margin-top: 78px;
+}
+/*  */
+
+.menu-wrapper {
+  position: relative;
+}
+
+/* task-menu بدون بک‌گراند */
+.task-menu {
+  position: absolute;
+  top: 50px;
+  left: -35px;
+  pointer-events: none;
+}
+
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-buttons button {
+  max-width: 137px;
+  text-align: center;
+  font-family: "YekanBakhBold", Tahoma, sans-serif;
+  background: var(--accent-green);
+  color: var(--dark-green);
+  font-size: 14px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 9999px; /* fully rounded */
+  cursor: pointer;
+
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* active state */
+.task-menu.active .task-buttons button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* stagger animation */
+.task-buttons button:nth-child(1) {
+  transition-delay: calc(var(--delay, 1) * 0.1s);
+}
+.task-buttons button:nth-child(2) {
+  transition-delay: calc(var(--delay, 2) * 0.1s);
+}
+.task-buttons button:nth-child(3) {
+  transition-delay: calc(var(--delay, 3) * 0.1s);
+}
+.task-buttons button:nth-child(4) {
+  transition-delay: calc(var(--delay, 4) * 0.1s);
+}

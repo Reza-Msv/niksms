@@ -1,0 +1,101 @@
+.slider-card {
+    background: #f1f3f4;
+    border-radius: 40px;
+    padding: 24px;
+}
+
+.slider-body {
+    background: white;
+    border-radius: 35px;
+    padding: 40px 20px;
+}
+
+.swiper-slide {
+    height: 380px;
+    border-radius: 35px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* افکت تیره پایین اسلاید برای خوانایی متن */
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: white;
+}
+
+.slide-info { text-align: right; }
+.slide-info h3 { font-size: 1.4rem; margin-bottom: 8px; font-weight: bold; }
+.slide-info p { font-size: 0.85rem; opacity: 0.9; line-height: 1.6; }
+
+.slide-badge {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* فوتر اسلایدر (دکمه‌ها و نقاط) */
+.slider-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.swiper-pagination {
+    position: static !important;
+    background: #DFFCA1;
+    padding: 10px 25px !important;
+    border-radius: 50px;
+    width: auto !important;
+    display: flex;
+    gap: 8px;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 1 !important;
+    width: 10px;
+    height: 10px;
+    margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #094020 !important;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-button-next-custom, .swiper-button-prev-custom {
+    width: 45px;
+    height: 45px;
+    background: #DFFCA1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #094020;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swiper-button-next-custom:hover, .swiper-button-prev-custom:hover {
+    background: #c9eb8d;
+}

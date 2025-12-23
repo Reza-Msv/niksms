@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "YekanBakh";
+  src: url("../fonts/YekanBakhMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YekanBakhBold";
+  src: url("../fonts/YekanBakhBold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+ 
+:root {
+  --bg-color: #f8fafc; /* سفید مایل به خاکستری خیلی روشن */
+  --text-main: #1e293b; /* سیاه مایل به سرمه‌ای تیره */
+  --accent-green: #d9f99d; /* سبز روشن (مشابه عکس اول) */
+  --dark-green: #14532d; /* سبز تیره برای نوشته‌های روی سبز روشن */
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "YekanBakh", Tahoma, sans-serif;
+  color: var(--text-main);
+  direction: rtl; /* برای چیدمان راست به چپ */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
