@@ -1,7 +1,7 @@
 const passwordInput = document.getElementById("password");
 const submitBtn = document.getElementById("submitBtn");
 
-// المان‌های چک‌لیست
+
 const checks = {
   length: document.getElementById("check-length"),
   number: document.getElementById("check-number"),
@@ -11,19 +11,19 @@ const checks = {
 passwordInput.addEventListener("input", () => {
   const val = passwordInput.value;
 
-  // ۱. بررسی طول (حداقل ۸)
+
   const isLengthValid = val.length >= 8;
   updateStatus(checks.length, isLengthValid);
 
-  // ۲. بررسی وجود عدد
+
   const hasNumber = /\d/.test(val);
   updateStatus(checks.number, hasNumber);
 
-  // ۳. بررسی حروف خاص
+
   const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(val);
   updateStatus(checks.special, hasSpecial);
 
-  // فعال/غیرفعال کردن دکمه نهایی
+
   if (isLengthValid && hasNumber && hasSpecial) {
     submitBtn.disabled = false;
     submitBtn.classList.add("active");
@@ -42,3 +42,21 @@ function updateStatus(element, isValid) {
     element.textContent = element.textContent.replace("✓", "—");
   }
 }
+
+const words = document.querySelectorAll(".word");
+let current = 0;
+
+setInterval(() => {
+  const currentWord = words[current];
+  const next = (current + 1) % words.length;
+  const nextWord = words[next];
+
+
+  currentWord.classList.remove("active");
+  currentWord.classList.add("exit-up");
+
+  nextWord.classList.remove("exit-up");
+  nextWord.classList.add("active");
+
+  current = next;
+}, 2000);

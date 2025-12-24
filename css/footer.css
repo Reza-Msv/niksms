@@ -1,0 +1,47 @@
+.footer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flower-img {
+  position: relative;
+  top: -60px;
+  width: 153px;
+  height: auto;
+}
+
+.end-img {
+  width: 600px;
+  position: relative;
+  top: 30px;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flower-img {
+    position: static;
+    top: 0;
+    width: 120px;
+  }
+
+  .end-img {
+    position: static;
+    top: 0;
+    width: 90%;
+    height: auto;
+  }
+}

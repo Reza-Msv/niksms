@@ -22,17 +22,17 @@
 }
  
 :root {
-  --bg-color: #f8fafc; /* سفید مایل به خاکستری خیلی روشن */
-  --text-main: #1e293b; /* سیاه مایل به سرمه‌ای تیره */
-  --accent-green: #d9f99d; /* سبز روشن (مشابه عکس اول) */
-  --dark-green: #14532d; /* سبز تیره برای نوشته‌های روی سبز روشن */
+  --bg-color: #f8fafc; 
+  --text-main: #1e293b; 
+  --accent-green: #d9f99d; 
+  --dark-green: #14532d;
 }
 
 body {
   background: var(--bg-color);
   font-family: "YekanBakh", Tahoma, sans-serif;
   color: var(--text-main);
-  direction: rtl; /* برای چیدمان راست به چپ */
+  direction: rtl; 
 }
 
 .container {

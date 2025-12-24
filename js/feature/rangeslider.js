@@ -1,16 +1,18 @@
 const sliderInput = document.getElementById("myRange");
 const displayValue = document.getElementById("currentValue");
 
-// تابع تبدیل اعداد انگلیسی به فارسی
 const toFarsi = (num) => {
   const farsiDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
-  return num.toString().replace(/\d/g, (x) => farsiDigits[x]);
+  return num
+    .toString()
+    .split("")
+    .map((digit) => farsiDigits[digit])
+    .join("");
 };
 
-// آپدیت کردن مقدار هنگام تغییر اسلایدر
 sliderInput.addEventListener("input", (e) => {
-  displayValue.textContent = toFarsi(e.target.value);
+  const correctedValue = 110 - parseInt(e.target.value);
+  displayValue.textContent = toFarsi(correctedValue);
 });
 
-// مقداردهی اولیه
-displayValue.textContent = toFarsi(sliderInput.value);
+displayValue.textContent = toFarsi(110 - parseInt(sliderInput.value));

@@ -8,7 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/intro.css" />
+    <link rel="stylesheet" href="./css/headerHero.css" />
     <link rel="stylesheet" href="./css/rangeslider.css" />
     <link rel="stylesheet" href="./css/form.css" />
     <link rel="stylesheet" href="./css/tabmenu.css" />
@@ -16,6 +17,57 @@
 
   <body>
     <div class="app">
+      <!-- intro sections  -->
+      <section class="intro">
+        <div class="intro__content container">
+          <div class="intro__badge">Task Project</div>
+          <h1>خوش آمدید <span class="wave">👋</span></h1>
+
+          <div class="intro__description">
+            <p>
+              این یک تسک آزمایشی برای
+              <strong class="highlight">نیک اس ام اس</strong> است که با استفاده
+              از <strong>HTML, CSS, JS Pure</strong> پیاده‌سازی شده است.
+            </p>
+
+            <div class="task-cards">
+              <div class="card">
+                <span class="check">✔</span>
+                <span>اسلایدر</span>
+              </div>
+              <div class="card">
+                <span class="check">✔</span>
+                <span>تب منو</span>
+              </div>
+              <div class="card">
+                <span class="check">✔</span>
+                <span>فرم ثبت‌نام</span>
+              </div>
+              <div class="card">
+                <span class="check">✔</span>
+                <span>رنج اسلایدر</span>
+              </div>
+            </div>
+
+            <p><span>برای مشاهده تسک دکمه زیر را کلیک کنید</span></p>
+          </div>
+
+          <button id="enterBtn">
+            <span>مشاهده تسک</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
       <!-- header -->
       <header class="header container">
         <div class="header__name">رضا موسوی</div>
@@ -66,420 +118,248 @@
         </div>
       </header>
 
-      <section class="intro">
-        <div class="intro__content container">
-          <div class="intro__badge">Task Project</div>
-          <h1>خوش آمدید <span class="wave">👋</span></h1>
-          <p>
-            این یک تسک آزمایشی برای
-            <strong class="highlight">نیک اس ام اس</strong>
-            است
-            <br />
-            <span>برای مشاهده تسک دکمه زیر را کلیک کنید</span>
-          </p>
-          <button id="enterBtn">
-            <span>مشاهده تسک</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </button>
+      <!-- hero section -->
+      <section class="hero">
+        <div class="hero__container container">
+          <h2 class="hero__title">
+            بزار کُدت
+            <span class="hero__code-wrapper">
+              <img
+                src="./assets/hero/code.png"
+                alt="code icon"
+                class="hero__code-img"
+              />
+            </span>
+            حرف بزنه...
+          </h2>
+
+          <p class="hero__subtitle">صفحه‌ای ساده اما با جزئیات ریز!</p>
+
+          <div class="hero__arrow">
+            <img
+              src="./assets/hero/arrow.png"
+              alt="arrow"
+              class="hero__arrow-img"
+            />
+          </div>
         </div>
       </section>
 
       <!-- slider -->
 
-      <section class="slider-section container">
-        <div class="slider-card">
-          <div class="slider-header">
-            <div class="slider-header-right">
-              <span class="slider-dot"></span>
-              <span class="slider-title-fa">اسلایدر</span>
-            </div>
-            <span class="slider-title-en">Slider</span>
-          </div>
-
-          <div class="slider-body">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div
-                  class="swiper-slide"
-                  style="background-image: url('./assets/image1.jpg')"
-                >
-                  <div class="slide-overlay">
-                    <div class="slide-info">
-                      <span class="slide-badge"
-                        ><svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                          ></path></svg
-                      ></span>
-                      <h3>زیبایی طبیعت</h3>
-                      <p>تصویری زیبا از گل‌های آفتابگردان</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide"
-                  style="background-image: url('./assets/image2.jpg')"
-                >
-                  <div class="slide-overlay">
-                    <div class="slide-info">
-                      <span class="slide-badge"
-                        ><svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                          ></path></svg
-                      ></span>
-                      <h3>تصویری از جنس آرامش</h3>
-                      <p>
-                        تصویری زیبا از گل‌های آفتابگردان در ناحیه دشت‌های سرسبز
-                        رشته کوه های زاگرس
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide"
-                  style="background-image: url('./assets/image3.jpg')"
-                >
-                  <div class="slide-overlay">
-                    <div class="slide-info">
-                      <span class="slide-badge"
-                        ><svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                          ></path></svg
-                      ></span>
-                      <h3>شکوه کوهستان</h3>
-                      <p>نمایی برفی از قله‌های مرتفع</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slider-footer">
-                <div class="swiper-button-prev-custom">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                  >
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next-custom">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                  >
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- tab menu -->
 
-      <section class="tabmenu-section container">
-        <div class="tabmenu-card">
-          <div class="tabmenu-header">
-            <div class="tabmenu-header-right">
-              <span class="tabmenu-dot"></span>
-              <span class="tabmenu-title-fa">تب منو</span>
-            </div>
-            <span class="tabmenu-title-en">Tab Menu</span>
-          </div>
-
-          <div class="tabmenu-body">
-            <div class="tabs-nav">
-              <button class="tab-btn active" data-tab="1">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                  />
-                </svg>
-                منو شماره یک
-              </button>
-              <button class="tab-btn" data-tab="2">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                  <line x1="9" y1="9" x2="9.01" y2="9" />
-                  <line x1="15" y1="9" x2="15.01" y2="9" />
-                </svg>
-                منو شماره دوم
-              </button>
-              <button class="tab-btn" data-tab="3">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1v12z"
-                  />
-                  <line x1="4" y1="22" x2="4" y2="15" />
-                </svg>
-                منو شماره سوم
-              </button>
-              <button class="tab-btn" data-tab="4">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                  />
-                </svg>
-                منو شماره چهارم
-              </button>
-            </div>
-
-            <div class="tabs-content">
-              <div class="tab-pane active" id="tab-1">
-                <div class="tab-grid">
-                  <div class="tab-image-wrapper">
-                    <img
-                      src="https://via.placeholder.com/400x500"
-                      alt="content"
-                    />
-                    <button class="play-btn">▶</button>
-                  </div>
-                  <div class="tab-text">
-                    <h3>منو شماره یک <span class="title-icon">🌿</span></h3>
-                    <p>
-                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
-                      و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
-                      روزنامه و مجله در ستون و برای شرایط فعلی تکنولوژی مورد
-                      نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
-                      باشد.
-                    </p>
-                    <button class="more-btn">
-                      <span>اطلاعات بیشتر</span>
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- form section -->
-
-      <section dir="ltr" class="signup-section container">
-        <div class="signup-card">
-          <div class="signup-header">
-            <div class="signup-header-right">
-              <span class="signup-dot"></span>
-              <span class="signup-title-fa">فرم ثبت نام</span>
-            </div>
-            <span class="signup-title-en">Signup Form</span>
-          </div>
-
-          <div class="signup-body">
-            <div class="signup-visual">
-              <div class="visual-text">
-                Let's Make <br />
-                <span class="better-box">a Better</span> <br />
-                World together
-              </div>
-              <div class="visual-emoji">
-                <div class="emoji-circle">😊</div>
-              </div>
-            </div>
-
-            <form class="signup-form" id="registrationForm">
-              <div class="input-group">
-                <label>نام کاربری</label>
-                <input
-                  type="text"
-                  id="username"
-                  placeholder="مثلاً : حمیدرضا"
-                  required
-                />
-              </div>
-
-              <div class="input-group">
-                <label>شماره تماس</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="مثلاً : ۰۹۱۲۱۱۴۴۵۵۸۸"
-                  dir="ltr"
-                  required
-                />
-              </div>
-
-              <div class="input-group">
-                <label>رمز عبور</label>
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="رمز عبور مورد نظر خود را وارد کنید ..."
-                  required
-                />
-
-                <div class="password-check">
-                  <div id="check-length" class="check-item">
-                    — حداقل باید ۸ حرف باشد
-                  </div>
-                  <div id="check-number" class="check-item">
-                    — باید شامل عدد باشد
-                  </div>
-                  <div id="check-special" class="check-item">
-                    — شامل حروف خاص مثل : ؟-!#% باشد
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-actions">
-                <button type="button" class="btn-cancel">انصراف</button>
-                <button
-                  type="submit"
-                  class="btn-submit"
-                  id="submitBtn"
-                  disabled
-                >
-                  ثبت نام
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="8.5" cy="7" r="4" />
-                    <line x1="20" y1="8" x2="20" y2="14" />
-                    <line x1="23" y1="11" x2="17" y2="11" />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- rangeslider -->
-      <section dir="ltr" class="rangeslider-section container">
-        <div class="rangeslider-card">
-          <div class="rangeslider-header">
-            <div class="rangeslider-header-right">
-              <span class="rangeslider-dot"></span>
-              <span class="rangeslider-title-fa">رنج اسلایدر</span>
-            </div>
-            <span class="rangeslider-title-en">Range Slider</span>
-          </div>
-
-          <div class="rangeslider-body">
-            <div class="rangeslider-display">
-              <span class="rangeslider-help-icon">؟</span>
-              <span>انتخاب شده</span>
-              <span id="currentValue" class="rangeslider-number">۲۰</span>
-              <span>عدد</span>
-            </div>
-
-            <div class="rangeslider-container">
-              <input
-                type="range"
-                min="10"
-                max="100"
-                value="20"
-                step="10"
-                id="myRange"
-                class="rangeslider-input"
-              />
-              <div class="rangeslider-labels">
-                <span>۱۰۰</span>
-                <span>۹۰</span>
-                <span>۸۰</span>
-                <span>۷۰</span>
-                <span>۶۰</span>
-                <span>۵۰</span>
-                <span>۴۰</span>
-                <span>۳۰</span>
-                <span>۲۰</span>
-                <span>۱۰</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="tabmenu-section container">
+  <div class="tabmenu-card">
+    <div class="tabmenu-header">
+      <div class="tabmenu-header-right">
+        <span class="tabmenu-dot"></span>
+        <span class="tabmenu-title-fa">تب منو</span>
+      </div>
+      <span class="tabmenu-title-en">Tab Menu</span>
     </div>
 
+    <div class="tabmenu-body">
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="1">
+          <img src="/assets/tab/flower.png" alt="flower" width="20" height="20">
+          منو شماره یک
+        </button>
+        
+        <button class="tab-btn" data-tab="2">
+          <img src="/assets/tab/ball.png" alt="ball" width="20" height="20">
+          منو شماره دوم
+        </button>
+        
+        <button class="tab-btn" data-tab="3">
+          <img src="/assets/tab/flag.png" alt="flag" width="20" height="20">
+          منو شماره سوم
+        </button>
+        
+        <button class="tab-btn" data-tab="4">
+          <img src="/assets/tab/feather.png" alt="flower" width="20" height="20">
+          منو شماره چهارم
+        </button>
+      </div>
+
+      <div class="tab-pane active" id="tab-1">
+        <div class="tab-grid">
+          <div class="tab-text">
+            <h3> 
+              <div class="icon-dev">
+                <img src="/assets/tab/flower.png" >
+              </div>
+            منو شماره یک
+            </h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+              و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+              روزنامه و مجله در ستون و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+              باشد.
+            </p>
+            <button class="more-btn">
+              <span>اطلاعات بیشتر</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="tab-image-wrapper">
+            <img src="/assets/tab/tab.png" alt="content" />
+            <button class="play-btn">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- form section -->
+ <section dir="ltr" class="signup-section container">
+  <div class="signup-card">
+    <div dir="rtl" class="signup-header">
+      <div class="signup-header-right">
+        <span class="signup-dot"></span>
+        <span class="signup-title-fa">فرم ثبت نام</span>
+      </div>
+      <span class="signup-title-en">Signup Form</span>
+    </div>
+
+    <div class="signup-body">
+      <div class="signup-visual">
+        
+        <div class="visual-text">
+          Let's Make <br />
+          <p class="better-box">
+  a 
+  <span class="word active">Better</span>
+  <span class="word">Easier</span>
+</p>
+          World <br/>together
+        </div>
+        <div class="visual-emoji">
+          <div class="emoji-circle">
+            <img class="vector" alt="image" src="/assets/vector.png"/>
+          </div>
+        </div>
+      </div>
+
+      <form class="signup-form" id="registrationForm">
+        <div class="input-group">
+          <label>نام کاربری</label>
+          <input type="text" id="username" placeholder="مثلاً : حمیدرضا" required />
+        </div>
+
+        <div class="input-group">
+          <label>شماره تماس</label>
+          <input type="tel" id="phone" placeholder="مثلاً : ۰۹۱۲۱۱۴۴۵۵۸۸" dir="rtl" required />
+        </div>
+
+        <div class="input-group">
+          <label>رمز عبور</label>
+          <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید ..." required />
+
+          <div class="password-check">
+            <div id="check-length" class="check-item">— حداقل باید ۸ حرف باشد</div>
+            <div id="check-number" class="check-item">— باید شامل عدد باشد</div>
+            <div id="check-special" class="check-item">— شامل حروف خاص مثل : ؟-!#% باشد</div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cancel">انصراف</button>
+          <button type="submit" class="btn-submit" id="submitBtn" disabled>
+            ثبت نام
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="8.5" cy="7" r="4" />
+              <line x1="20" y1="8" x2="20" y2="14" />
+              <line x1="23" y1="11" x2="17" y2="11" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <!-- rangeslider -->
+   <section dir="ltr" class="rangeslider-section container">
+  <div class="rangeslider-card">
+    <div class="rangeslider-header">
+      <span class="rangeslider-title-en">Range Slider</span>
+      <div class="rangeslider-header-right">
+        <span class="rangeslider-title-fa">رنج اسلایدر</span>
+        <span class="rangeslider-dot"></span>
+      </div>
+    </div>
+
+    <div class="rangeslider-body">
+      <div class="rangeslider-display">
+        <span class="rangeslider-help-icon">؟</span>
+        <span>انتخاب شده</span>
+        <span id="currentValue" class="rangeslider-number">۲۰</span>
+        <span>عدد</span>
+      </div>
+
+      <div class="rangeslider-container">
+        <input
+          type="range"
+          min="10"
+          max="100"
+          value="90"
+          step="10"
+          id="myRange"
+          class="rangeslider-input"
+        />
+        <div class="rangeslider-labels">
+          <span>۱۰۰</span>
+          <span>۹۰</span>
+          <span>۸۰</span>
+          <span>۷۰</span>
+          <span>۶۰</span>
+          <span>۵۰</span>
+          <span>۴۰</span>
+          <span>۳۰</span>
+          <span>۲۰</span>
+          <span>۱۰</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- footer -->
+     <footer class="footer">
+    <div class="image-container">
+        <img src="/assets/footer.png" class="footer-img flower-img" alt="flower" />
+        <img src="/assets/end.png" class="footer-img end-img" alt="the end" />
+    </div>
+  </footer>
+      </div>
+    </div>
+
+
+
+    <!-- modal -->
+<div id="videoModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-header">
+      <span class="modal-title">پاپ آپ ویدیو</span>
+      <button class="modal-close" id="closeModal">&times;</button>
+    </div>
+    
+    <div class="modal-body">
+      <div class="modal-video-container">
+        <img src="/assets/slider/2.jpg" alt="Video Preview" class="modal-img" />
+        <button class="play-btn static-play">▶</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/feature/rangeslider.js"></script>
