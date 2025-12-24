@@ -186,7 +186,7 @@
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background: rgba(223, 252, 161, 0.9);
+  background: hwb(79 63% 1% / 0.9);
   border-radius: 50%;
   font-size: 1.5rem;
   color: #094020;
@@ -283,7 +283,6 @@
   align-items: center;
   padding: 20px 30px;
   background: #fff;
-  border-bottom: 1px solid #f0f0f0;
   direction: rtl;
 }
 

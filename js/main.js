@@ -41,15 +41,16 @@ enterBtn.addEventListener("click", () => {
 });
 
 
-
-
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("taskMenu");
 const iconHamburger = document.querySelector(".icon-hamburger");
 const iconClose = document.querySelector(".icon-close");
+const taskLinks = document.querySelectorAll(".task-buttons a");
 
 menuBtn.addEventListener("click", () => {
   const isActive = menu.classList.toggle("active");
+
+  menuBtn.classList.toggle("active", isActive);
 
   if (isActive) {
     iconHamburger.style.display = "none";
@@ -58,4 +59,12 @@ menuBtn.addEventListener("click", () => {
     iconHamburger.style.display = "block";
     iconClose.style.display = "none";
   }
+});
+
+taskLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    taskLinks.forEach((l) => l.classList.remove("selected"));
+    this.classList.add("selected");
+    menuBtn.click();
+  });
 });

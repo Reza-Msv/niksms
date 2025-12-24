@@ -52,4 +52,5 @@ button {
   min-height: 100vh;
   background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
   background-size: 32px 32px;
+  padding-bottom: 20px;
 }

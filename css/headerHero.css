@@ -1,4 +1,3 @@
-
 .menu-btn {
   background: var(--accent-green);
   color: var(--dark-green);
@@ -14,10 +13,63 @@
   transition: transform 0.2s;
 }
 
+.menu-btn.active {
+  background: var(--dark-green) !important;
+  color: #dffca1 !important;
+}
+
+.task-buttons a {
+  max-width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 15px;
+  background: white;
+  color: var(--dark-green);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.circle-icon {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--dark-green);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.task-buttons a:hover {
+  background: #094020;
+  color: #dffca1;
+  .circle-icon {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+  }
+}
+
+.task-buttons a.selected {
+  background: var(--dark-green);
+  color: #dffca1;
+  border-color: #dffca1;
+}
+
+.task-buttons a.selected .circle-icon {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.task-menu.active {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
 .menu-btn:active {
   transform: scale(0.95);
 }
-
 
 .hamburger {
   display: flex;
@@ -56,7 +108,7 @@
 }
 
 .task-menu button {
-   padding: 8px 21px;
+  padding: 8px 21px;
 
   text-align: right;
   border-radius: 10px;
@@ -71,17 +123,15 @@
 
 .header {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   padding-top: 78px;
 }
 
-
 .menu-wrapper {
   position: relative;
 }
-
 
 .task-menu {
   position: absolute;
@@ -96,7 +146,7 @@
   gap: 8px;
 }
 
-.task-buttons button {
+.task-buttons a {
   max-width: 137px;
   text-align: center;
   font-family: "YekanBakhBold", Tahoma, sans-serif;
@@ -105,31 +155,29 @@
   font-size: 14px;
   font-weight: bolder;
   border: none;
-  border-radius: 9999px; 
+  border-radius: 9999px;
   cursor: pointer;
-
+  padding: 8px;
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-.task-menu.active .task-buttons button {
+.task-menu.active .task-buttons a {
   transform: translateY(0);
   opacity: 1;
 }
 
-
-.task-buttons button:nth-child(1) {
+.task-buttons a:nth-child(1) {
   transition-delay: calc(var(--delay, 1) * 0.1s);
 }
-.task-buttons button:nth-child(2) {
+.task-buttons a:nth-child(2) {
   transition-delay: calc(var(--delay, 2) * 0.1s);
 }
-.task-buttons button:nth-child(3) {
+.task-buttons a:nth-child(3) {
   transition-delay: calc(var(--delay, 3) * 0.1s);
 }
-.task-buttons button:nth-child(4) {
+.task-buttons a:nth-child(4) {
   transition-delay: calc(var(--delay, 4) * 0.1s);
 }
 
@@ -139,20 +187,20 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  direction: rtl; 
+  direction: rtl;
 }
 
 .hero__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px; 
+  gap: 5px;
 }
 
 .hero__title {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #094020; 
+  color: #094020;
   display: flex;
   align-items: end;
   gap: 15px;
@@ -166,7 +214,6 @@
   align-items: center;
 }
 
-
 .hero__code-img {
   height: 85px; /* افزایش ارتفاع برای وضوح بیشتر */
   width: auto;
@@ -177,13 +224,12 @@
 .hero__subtitle {
   font-size: 2.5rem;
   color: #094020;
-  margin-top: 0; 
+  margin-top: 0;
   font-weight: 500;
 }
 
-
 .hero__arrow {
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .hero__arrow-img {
@@ -193,11 +239,12 @@
 }
 
 @keyframes bounceArrow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(8px); 
+    transform: translateY(8px);
   }
 }
 
@@ -206,7 +253,7 @@
     font-size: 2rem;
   }
   .hero__code-img {
-    height: 90px; 
+    height: 90px;
   }
   .hero__subtitle {
     font-size: 1.2rem;
