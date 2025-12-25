@@ -6,7 +6,6 @@
   font-family: "YekanBakhBold", Tahoma, sans-serif;
   font-size: 16px;
   flex-direction: row-reverse;
-  align-items: center;
   border-radius: 50px;
   display: flex;
   gap: 4px;
@@ -19,10 +18,10 @@
 }
 
 .task-buttons a {
-  max-width: 170px;
+  max-width: 170px; 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; 
   gap: 12px;
   padding: 8px 15px;
   background: white;
@@ -58,7 +57,7 @@
 }
 
 .task-buttons a.selected .circle-icon {
-  background: var(--accent-green);
+  background: var(--accent-green); 
   border-color: var(--accent-green);
 }
 
@@ -259,3 +258,102 @@
     font-size: 1.2rem;
   }
 }
+
+
+/* --- استایل‌های پایه و ریسپانسیو بخش Hero --- */
+
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden; /* برای جلوگیری از بیرون زدن فلش در موبایل */
+}
+
+.hero__title {
+  font-size: 4rem; /* سایز دسکتاپ */
+  font-weight: 900;
+  color: #094020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* برای اینکه در موبایل کلمات زیر هم بروند */
+}
+
+.hero__code-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero__code-img {
+  width: 80px; /* سایز دسکتاپ */
+  height: auto;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+.hero__arrow {
+  margin-top: 40px;
+}
+
+.hero__arrow-img {
+  max-width: 150px;
+}
+
+/* --- Media Queries --- */
+
+/* تبلت (Laptops & Tablets) */
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+  .hero__code-img {
+    width: 65px;
+  }
+}
+
+/* موبایل (Phones) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero__title {
+    font-size: 2.2rem; /* کوچک‌تر کردن تیتر برای جا شدن در عرض گوشی */
+    line-height: 1.4;
+    gap: 10px;
+  }
+
+  .hero__code-img {
+    width: 50px; /* کوچک کردن آیکون کد */
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .hero__arrow-img {
+    max-width: 100px; /* کوچک کردن تصویر فلش */
+    transform: rotate(10deg); /* کمی چرخش برای فیت شدن بهتر (اختیاری) */
+  }
+}
+
+/* گوشی‌های خیلی کوچک */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.8rem;
+  }
+  
+  .hero__code-img {
+    width: 40px;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
