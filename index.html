@@ -2,7 +2,8 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>Task</title>
+    <title>Task Project - Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -14,11 +15,12 @@
     <link rel="stylesheet" href="./css/form.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/tabmenu.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <div class="app">
-      <!-- intro sections  -->
       <section class="intro">
         <div class="intro__content container">
           <div class="intro__badge">Task Project</div>
@@ -69,7 +71,6 @@
         </div>
       </section>
 
-      <!-- header -->
       <header class="header container">
         <div class="header__name">رضا موسوی</div>
 
@@ -108,21 +109,27 @@
             </div>
           </button>
 
-      <div class="task-menu" id="taskMenu">
-  <div class="task-buttons">
-    <a href="" style="--delay: 1"><span class="circle-icon"></span>اسلایدر</a>
-    <a href="#tabmenu" style="--delay: 2"><span class="circle-icon"></span>تب منو</a>
-    <a href="#form" style="--delay: 3"><span class="circle-icon"></span>فرم ثبت نام</a>
-    <a href="#rangeslider" style="--delay: 4"><span class="circle-icon"></span>رنج اسلایدر</a>
-  </div>
-</div>
+          <div class="task-menu" id="taskMenu">
+            <div class="task-buttons">
+              <a href="#slider" style="--delay: 1"
+                ><span class="circle-icon"></span>اسلایدر</a
+              >
+              <a href="#tabmenu" style="--delay: 2"
+                ><span class="circle-icon"></span>تب منو</a
+              >
+              <a href="#form" style="--delay: 3"
+                ><span class="circle-icon"></span>فرم ثبت نام</a
+              >
+              <a href="#rangeslider" style="--delay: 4"
+                ><span class="circle-icon"></span>رنج اسلایدر</a
+              >
+            </div>
+          </div>
         </div>
       </header>
 
-      <h2>hello there</h2>
-      <!-- hero section -->
       <section class="hero">
-        <div class="hero__container container">
+        <div class="hero__container">
           <h2 class="hero__title">
             بزار کُدت
             <span class="hero__code-wrapper">
@@ -147,228 +154,385 @@
         </div>
       </section>
 
-      <!-- slider -->
-
-      <!-- tab menu -->
-
-<section id="tabmenu" class="tabmenu-section container">
-  <div class="tabmenu-card">
-    <div class="tabmenu-header">
-      <div class="tabmenu-header-right">
-        <span class="tabmenu-dot"></span>
-        <span class="tabmenu-title-fa">تب منو</span>
-      </div>
-      <span class="tabmenu-title-en">Tab Menu</span>
-    </div>
-
-    <div class="tabmenu-body">
-      <div class="tabs-nav">
-        <button class="tab-btn active" data-tab="1">
-          <img src="assets/tab/flower.png" alt="flower" width="20" height="20">
-          منو شماره یک
-        </button>
-        
-        <button class="tab-btn" data-tab="2">
-          <img src="assets/tab/ball.png" alt="ball" width="20" height="20">
-          منو شماره دوم
-        </button>
-        
-        <button class="tab-btn" data-tab="3">
-          <img src="assets/tab/flag.png" alt="flag" width="20" height="20">
-          منو شماره سوم
-        </button>
-        
-        <button class="tab-btn" data-tab="4">
-          <img src="assets/tab/feather.png" alt="flower" width="20" height="20">
-          منو شماره چهارم
-        </button>
-      </div>
-
-      <div class="tab-pane active" id="tab-1">
-        <div class="tab-grid">
-          <div class="tab-text">
-            <h3> 
-              <div class="icon-dev">
-                <img src="assets/tab/flower.png" >
+      <section id=" slider" class="tabmenu-section container">
+        <div class="tabmenu-card">
+          <div class="tabmenu-header">
+            <div class="tabmenu-header-right">
+              <span class="tabmenu-dot"></span>
+              <span class="tabmenu-title-fa">اسلایدر</span>
+            </div>
+            <span class="tabmenu-title-en">Slider</span>
+          </div>
+          <div class="tabmenu-body">
+            <article id="slider-anchor" class="slider-section">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('assets/slider/1.jpg')"
+                  >
+                    <div class="ai-badge">
+                      <img src="assets/tab/flower.png" width="20" />
+                    </div>
+                    <div class="slide-content">
+                      <h3>زیبایی طبیعت</h3>
+                      <p>تصویری زیبا از گل های آفتابگردان در دشت‌های زاگرس</p>
+                    </div>
+                  </div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('assets/slider/2.jpg')"
+                  >
+                    <div class="ai-badge">
+                      <img src="assets/tab/flower.png" width="20" />
+                    </div>
+                    <div class="slide-content">
+                      <h3>تصویری از جنس آرامش</h3>
+                      <p>
+                        تصویری زیبا از گل های آفتابگردان در ناحیه دشت های سرسبز
+                        رشته کوه های زاگرس
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('assets/slider/3.jpg')"
+                  >
+                    <div class="ai-badge">
+                      <img src="assets/tab/flower.png" width="20" />
+                    </div>
+                    <div class="slide-content">
+                      <h3>قله‌های برفی</h3>
+                      <p>نمایی خیره‌کننده از ارتفاعات پوشیده از برف</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            منو شماره یک
-            </h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
-              و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
-              روزنامه و مجله در ستون و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
-              باشد.
-            </p>
-            <button class="more-btn">
-              <span>اطلاعات بیشتر</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-              </svg>
-            </button>
-          </div>
 
-          <div class="tab-image-wrapper">
-            <img src="assets/tab/tab.png" alt="content" />
-            <button class="play-btn">▶</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <!-- form section -->
- <section id="form" dir="ltr" class="signup-section container">
-  <div class="signup-card">
-    <div dir="rtl" class="signup-header">
-      <div class="signup-header-right">
-        <span class="signup-dot"></span>
-        <span class="signup-title-fa">فرم ثبت نام</span>
-      </div>
-      <span class="signup-title-en">Signup Form</span>
-    </div>
-
-    <div class="signup-body">
-      <div class="signup-visual">
-        
-        <div class="visual-text">
-          Let's Make <br />
-          <p class="better-box">
-  a 
-  <span class="word active">Better</span>
-  <span class="word">Easier</span>
-</p>
-          World <br/>together
-        </div>
-        <div class="visual-emoji">
-          <div class="emoji-circle">
-            <img class="vector" alt="image" src="assets/vector.png"/>
+              <div class="slider-controls">
+                <button class="nav-btn prev-btn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#1e3932"
+                    stroke-width="3"
+                  >
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <div class="swiper-pagination"></div>
+                <button class="nav-btn next-btn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#1e3932"
+                    stroke-width="3"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+      <!--? END Slider -->
 
-      <form class="signup-form" id="registrationForm">
-        <div class="input-group">
-          <label>نام کاربری</label>
-          <input type="text" id="username" placeholder="مثلاً : حمیدرضا" required />
-        </div>
+      <section id="tabmenu" class="tabmenu-section container">
+        <div class="tabmenu-card">
+          <div class="tabmenu-header">
+            <div class="tabmenu-header-right">
+              <span class="tabmenu-dot"></span>
+              <span class="tabmenu-title-fa">تب منو</span>
+            </div>
+            <span class="tabmenu-title-en">Tab Menu</span>
+          </div>
 
-        <div class="input-group">
-          <label>شماره تماس</label>
-          <input type="tel" id="phone" placeholder="مثلاً : ۰۹۱۲۱۱۴۴۵۵۸۸" dir="rtl" required />
-        </div>
+          <div class="tabmenu-body">
+            <div class="tabs-nav">
+              <button class="tab-btn active" data-tab="1">
+                <img
+                  src="assets/tab/flower.png"
+                  alt="flower"
+                  width="20"
+                  height="20"
+                />
+                منو شماره یک
+              </button>
 
-        <div class="input-group">
-          <label>رمز عبور</label>
-          <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید ..." required />
+              <button class="tab-btn" data-tab="2">
+                <img
+                  src="assets/tab/ball.png"
+                  alt="ball"
+                  width="20"
+                  height="20"
+                />
+                منو شماره دوم
+              </button>
 
-          <div class="password-check">
-            <div id="check-length" class="check-item">— حداقل باید ۸ حرف باشد</div>
-            <div id="check-number" class="check-item">— باید شامل عدد باشد</div>
-            <div id="check-special" class="check-item">— شامل حروف خاص مثل : ؟-!#% باشد</div>
+              <button class="tab-btn" data-tab="3">
+                <img
+                  src="assets/tab/flag.png"
+                  alt="flag"
+                  width="20"
+                  height="20"
+                />
+                منو شماره سوم
+              </button>
+
+              <button class="tab-btn" data-tab="4">
+                <img
+                  src="assets/tab/feather.png"
+                  alt="flower"
+                  width="20"
+                  height="20"
+                />
+                منو شماره چهارم
+              </button>
+            </div>
+
+            <div class="tab-pane active" id="tab-1">
+              <div class="tab-grid">
+                <div class="tab-text">
+                  <h3>
+                    <div class="icon-dev">
+                      <img src="assets/tab/flower.png" />
+                    </div>
+                    منو شماره یک
+                  </h3>
+                  <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                    با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
+                    و مجله در ستون و برای شرایط فعلی تکنولوژی مورد نیاز، و
+                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                  </p>
+                  <button class="more-btn">
+                    <span>اطلاعات بیشتر</span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="19" y1="12" x2="5" y2="12"></line>
+                      <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="tab-image-wrapper">
+                  <img src="assets/tab/tab.png" alt="content" />
+                  <button class="play-btn">▶</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="form-actions">
-          <button type="button" class="btn-cancel">انصراف</button>
-          <button type="submit" class="btn-submit" id="submitBtn" disabled>
-            ثبت نام
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="8.5" cy="7" r="4" />
-              <line x1="20" y1="8" x2="20" y2="14" />
-              <line x1="23" y1="11" x2="17" y2="11" />
-            </svg>
-          </button>
+      <section id="form" dir="ltr" class="signup-section container">
+        <div class="signup-card">
+          <div dir="rtl" class="signup-header">
+            <div class="signup-header-right">
+              <span class="signup-dot"></span>
+              <span class="signup-title-fa">فرم ثبت نام</span>
+            </div>
+            <span class="signup-title-en">Signup Form</span>
+          </div>
+
+          <div class="signup-body">
+            <div class="signup-visual">
+              <div class="visual-text">
+                Let's Make <br />
+                <p class="better-box">
+                  a
+                  <span class="word active">Better</span>
+                  <span class="word">Easier</span>
+                </p>
+                World <br />together
+              </div>
+              <div class="visual-emoji">
+                <div class="emoji-circle">
+                  <img class="vector" alt="image" src="assets/vector.png" />
+                </div>
+              </div>
+            </div>
+
+            <form class="signup-form" id="registrationForm">
+              <div class="input-group">
+                <label>نام کاربری</label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="مثلاً : حمیدرضا"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label>شماره تماس</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="مثلاً : ۰۹۱۲۱۱۴۴۵۵۸۸"
+                  dir="rtl"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label>رمز عبور</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="رمز عبور خود را وارد کنید ..."
+                  required
+                />
+
+                <div class="password-check">
+                  <div id="check-length" class="check-item">
+                    — حداقل باید ۸ حرف باشد
+                  </div>
+                  <div id="check-number" class="check-item">
+                    — باید شامل عدد باشد
+                  </div>
+                  <div id="check-special" class="check-item">
+                    — شامل حروف خاص مثل : ؟-!#% باشد
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn-cancel">انصراف</button>
+                <button
+                  type="submit"
+                  class="btn-submit"
+                  id="submitBtn"
+                  disabled
+                >
+                  ثبت نام
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="8.5" cy="7" r="4" />
+                    <line x1="20" y1="8" x2="20" y2="14" />
+                    <line x1="23" y1="11" x2="17" y2="11" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
+      </section>
+
+      <section id="rangeslider" dir="ltr" class="rangeslider-section container">
+        <div class="rangeslider-card">
+          <div class="rangeslider-header">
+            <span class="rangeslider-title-en">Range Slider</span>
+
+            <div class="rangeslider-header-right">
+              <span class="rangeslider-title-fa">رنج اسلایدر</span>
+
+              <span class="rangeslider-dot"></span>
+            </div>
+          </div>
+
+          <div class="rangeslider-body">
+            <div class="rangeslider-display">
+              <span class="rangeslider-help-icon">؟</span>
+
+              <span>انتخاب شده</span>
+
+              <span id="currentValue" class="rangeslider-number">۲۰</span>
+
+              <span>عدد</span>
+            </div>
+
+            <div class="rangeslider-container">
+              <input
+                type="range"
+                min="10"
+                max="100"
+                value="90"
+                step="10"
+                id="myRange"
+                class="rangeslider-input"
+              />
+
+              <div class="rangeslider-labels">
+                <span>۱۰۰</span>
+
+                <span>۹۰</span>
+
+                <span>۸۰</span>
+
+                <span>۷۰</span>
+
+                <span>۶۰</span>
+
+                <span>۵۰</span>
+
+                <span>۴۰</span>
+
+                <span>۳۰</span>
+
+                <span>۲۰</span>
+
+                <span>۱۰</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="image-container">
+          <img
+            src="assets/footer.png"
+            class="footer-img flower-img"
+            alt="flower"
+          />
+          <img src="assets/end.png" class="footer-img end-img" alt="the end" />
+        </div>
+      </footer>
     </div>
-  </div>
-</section>
 
-      <!-- rangeslider -->
-   <section id="rangeslider" dir="ltr" class="rangeslider-section container">
-  <div class="rangeslider-card">
-    <div class="rangeslider-header">
-      <span class="rangeslider-title-en">Range Slider</span>
-      <div class="rangeslider-header-right">
-        <span class="rangeslider-title-fa">رنج اسلایدر</span>
-        <span class="rangeslider-dot"></span>
-      </div>
-    </div>
+    <div id="videoModal" class="modal-overlay">
+      <div class="modal-card">
+        <div class="modal-header">
+          <span class="modal-title">پاپ آپ ویدیو</span>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
 
-    <div class="rangeslider-body">
-      <div class="rangeslider-display">
-        <span class="rangeslider-help-icon">؟</span>
-        <span>انتخاب شده</span>
-        <span id="currentValue" class="rangeslider-number">۲۰</span>
-        <span>عدد</span>
-      </div>
-
-      <div class="rangeslider-container">
-        <input
-          type="range"
-          min="10"
-          max="100"
-          value="90"
-          step="10"
-          id="myRange"
-          class="rangeslider-input"
-        />
-        <div class="rangeslider-labels">
-          <span>۱۰۰</span>
-          <span>۹۰</span>
-          <span>۸۰</span>
-          <span>۷۰</span>
-          <span>۶۰</span>
-          <span>۵۰</span>
-          <span>۴۰</span>
-          <span>۳۰</span>
-          <span>۲۰</span>
-          <span>۱۰</span>
+        <div class="modal-body">
+          <div class="modal-video-container">
+            <img
+              src="assets/slider/2.jpg"
+              alt="Video Preview"
+              class="modal-img"
+            />
+            <button class="play-btn static-play">▶</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-      <!-- footer -->
-     <footer class="footer">
-    <div class="image-container">
-        <img src="assets/footer.png" class="footer-img flower-img" alt="flower" />
-        <img src="assets/end.png" class="footer-img end-img" alt="the end" />
-    </div>
-  </footer>
-    
-</div>
-    </div>
-
-
-
-    <!-- modal -->
-<div id="videoModal" class="modal-overlay">
-  <div class="modal-card">
-    <div class="modal-header">
-      <span class="modal-title">پاپ آپ ویدیو</span>
-      <button class="modal-close" id="closeModal">&times;</button>
-    </div>
-    
-    <div class="modal-body">
-      <div class="modal-video-container">
-        <img src="assets/slider/2.jpg" alt="Video Preview" class="modal-img" />
-        <button class="play-btn static-play">▶</button>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/feature/rangeslider.js"></script>
-    <script type="module" src="./js/feature/form.js"></script>
     <script type="module" src="./js/feature/tabMenu.js"></script>
-    <script type="module" src="./js/feature/slider.js"></script>
+    <script type="module" src="./js/feature/form.js"></script>
+    <script type="module" src="./js/feature/rangeslider.js"></script>
   </body>
 </html>

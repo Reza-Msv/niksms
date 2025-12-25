@@ -1,10 +1,10 @@
 .tabmenu-section {
   margin: 60px auto;
+  max-width: 1200px;
 }
 
 .tabmenu-card {
   background: #f1f3f4;
-  border-radius: 40px;
   padding: 20px;
 }
 
@@ -30,23 +30,19 @@
 
 .tabmenu-body {
   background: white;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 40px;
-}
-
-.tabmenu-section {
-  margin: 60px auto;
 }
 
 .tabmenu-card {
   background: #f1f3f4;
   padding: 20px;
-  border-radius: 40px;
+  border-radius: 30px;
 }
 
 .tabmenu-header {
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +75,7 @@
 
 .tabmenu-body {
   background: white;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -95,7 +91,6 @@
   }
 }
 
-/* نوار تب‌ها */
 .tabs-nav {
   background: #dffca1;
   padding: 10px;
@@ -179,25 +174,6 @@
   padding-left: 5px;
   transition: all 0.3s ease;
 }
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: hwb(79 63% 1% / 0.9);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: #094020;
-  cursor: pointer;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 5px;
-  z-index: 2;
-}
 
 .play-btn::before {
   content: "";
@@ -261,7 +237,6 @@
   width: 24px;
   height: 24px;
 }
-
 
 .modal-card {
   background: white;
@@ -346,54 +321,6 @@
   transform: scale(1);
 }
 
-@media (max-width: 1150px) {
-  .modal-card {
-    width: 95%;
-    height: auto;
-    aspect-ratio: 1111 / 681;
-  }
-}
-
-@media (max-width: 768px) {
-  .modal-overlay {
-    align-items: flex-end;
-  }
-
-  .modal-card {
-    width: 100% !important;
-    height: 33vh !important;
-    max-height: 33vh;
-    border-radius: 30px 30px 0 0;
-    transform: translateY(100%);
-    margin: 0;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  .modal-overlay.active .modal-card {
-    transform: translateY(0);
-  }
-
-  .modal-header {
-    padding: 10px 20px;
-  }
-
-  .modal-body {
-    padding: 10px;
-  }
-
-  .modal-video-container {
-    height: 100%;
-  }
-
-  .static-play {
-    width: 50px;
-    height: 50px;
-    font-size: 1rem;
-  }
-}
-
-
-/* --- استایل‌های ریسپانسیو کلی --- */
 
 @media (max-width: 1024px) {
   .tab-grid {
@@ -402,17 +329,16 @@
 }
 
 @media (max-width: 992px) {
-  /* تبدیل چیدمان از دو ستون به یک ستون */
   .tab-grid {
     grid-template-columns: 1fr !important;
     display: flex;
-    flex-direction: column-reverse; /* اول تصویر، بعد متن */
+    flex-direction: column;
     text-align: center;
   }
 
   .tab-image-wrapper {
     width: 100%;
-    height: 350px; /* ارتفاع مناسب برای تبلت */
+    height: 350px; 
   }
 
   .tab-text h3 {
@@ -420,10 +346,9 @@
   }
 
   .more-btn {
-    margin: 0 auto; /* وسط‌چین کردن دکمه */
+    margin: 0 auto;
   }
 
-  /* تنظیمات مدال برای تبلت و موبایل */
   .modal-card {
     width: 95% !important;
     height: auto !important;
@@ -432,15 +357,38 @@
 }
 
 @media (max-width: 768px) {
-  .tabmenu-section {
-    margin: 30px 10px;
+
+
+  .tabmenu-card {
+    padding: 10px;
+    border-radius: 0px;
+  }
+  .icon-dev {
+    padding: 8px;
+  }
+
+  .icon-dev img {
+    width: 16px;
+    height: 16px;
+  }
+  .more-btn {
+    margin-left: 270px;
+  }
+  .tab-text h3 {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: end;
+    justify-content: start;
+  }
+
+  .tab-text p {
+    text-align: right;
   }
 
   .tabmenu-body {
     padding: 20px 15px;
   }
 
-  /* --- اسکرول افقی دکمه‌های منو --- */
   .tabs-nav {
     display: flex;
     overflow-x: auto;
@@ -464,14 +412,16 @@
     font-size: 13px;
   }
 
-  /* --- تنظیمات مدال در موبایل (یک‌سوم پایین صفحه) --- */
   .modal-overlay {
     align-items: flex-end;
+    position: absolute;
+    left: 2px;
+    top: 450px;
   }
 
   .modal-card {
     width: 100% !important;
-    height: 33vh !important; /* یک‌سوم ارتفاع صفحه */
+    height: 50vh !important; 
     border-radius: 30px 30px 0 0;
     transform: translateY(100%);
   }
@@ -481,7 +431,7 @@
   }
 
   .tab-image-wrapper {
-    height: 250px; /* ارتفاع مناسب برای موبایل */
+    height: 250px; 
   }
 }
 
@@ -490,7 +440,7 @@
     padding: 12px 15px;
   }
 
-  .tabmenu-title-fa, 
+  .tabmenu-title-fa,
   .tabmenu-title-en {
     font-size: 0.75rem;
   }

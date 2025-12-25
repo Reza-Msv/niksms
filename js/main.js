@@ -1,4 +1,3 @@
-
 const initApp = () => {
   const enterBtn = document.getElementById("enterBtn");
   const introSection = document.querySelector(".intro");
@@ -40,7 +39,6 @@ enterBtn.addEventListener("click", () => {
   }, 800);
 });
 
-
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("taskMenu");
 const iconHamburger = document.querySelector(".icon-hamburger");
@@ -67,4 +65,28 @@ taskLinks.forEach((link) => {
     this.classList.add("selected");
     menuBtn.click();
   });
+});
+
+const swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  initialSlide: 1,
+  spaceBetween: 70,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".next-btn",
+    prevEl: ".prev-btn",
+  },
 });

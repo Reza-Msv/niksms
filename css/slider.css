@@ -1,4 +1,4 @@
-.slider-static {
+/* .slider-static {
   background: #f8fafc;
   padding: 40px;
   display: flex;
@@ -116,4 +116,114 @@
 @media (max-width: 900px) {
   .side-card { display: none; }
   .main-card { width: 100%; height: 300px; }
+} */
+
+.slider-section {
+  padding: 40px 0;
+  direction: ltr;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px; 
+  max-width: 85%; 
+  height: 400px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  direction: rtl;
+  text-align: right;
+}
+
+.slide-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.ai-badge {
+  position: absolute;
+  bottom: 110px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* استایل ناوبری */
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.swiper-pagination {
+  position: static !important;
+  background: #eef7bc;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1e3932 !important;
+  width: 12px;
+  height: 12px;
+}
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #eef7bc;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #d4e87d;
 }

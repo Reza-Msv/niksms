@@ -10,6 +10,7 @@
   display: flex;
   gap: 4px;
   transition: transform 0.2s;
+  margin: 50px;
 }
 
 .menu-btn.active {
@@ -18,10 +19,10 @@
 }
 
 .task-buttons a {
-  max-width: 170px; 
+  max-width: 170px;
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   gap: 12px;
   padding: 8px 15px;
   background: white;
@@ -57,7 +58,7 @@
 }
 
 .task-buttons a.selected .circle-icon {
-  background: var(--accent-green); 
+  background: var(--accent-green);
   border-color: var(--accent-green);
 }
 
@@ -85,6 +86,7 @@
 
 .header__name {
   font-weight: 800;
+  padding-top: 50px;
   font-size: 1.6rem;
 }
 
@@ -98,6 +100,8 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .task-menu.show {
@@ -123,9 +127,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  padding-top: 78px;
 }
 
 .menu-wrapper {
@@ -181,7 +182,6 @@
 }
 
 .hero {
-  padding: 95px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,8 +214,8 @@
 }
 
 .hero__code-img {
-  height: 85px; /* افزایش ارتفاع برای وضوح بیشتر */
-  width: auto;
+  height: 85px;
+  width: 60px;
   object-fit: contain;
   vertical-align: middle;
 }
@@ -227,13 +227,9 @@
   font-weight: 500;
 }
 
-.hero__arrow {
-  margin-top: 10px;
-}
-
 .hero__arrow-img {
   width: 50px;
-  height: auto;
+  height: 100px;
   animation: bounceArrow 2s infinite ease-in-out;
 }
 
@@ -247,36 +243,10 @@
   }
 }
 
-@media (max-width: 768px) {
-  .hero__title {
-    font-size: 2rem;
-  }
-  .hero__code-img {
-    height: 90px;
-  }
-  .hero__subtitle {
-    font-size: 1.2rem;
-  }
-}
-
-
-/* --- استایل‌های پایه و ریسپانسیو بخش Hero --- */
-
 .hero {
-  padding: 80px 0;
+  padding-bottom: 30px;
   text-align: center;
-  overflow: hidden; /* برای جلوگیری از بیرون زدن فلش در موبایل */
-}
-
-.hero__title {
-  font-size: 4rem; /* سایز دسکتاپ */
-  font-weight: 900;
-  color: #094020;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap; /* برای اینکه در موبایل کلمات زیر هم بروند */
+  overflow: hidden;
 }
 
 .hero__code-wrapper {
@@ -284,76 +254,44 @@
   align-items: center;
 }
 
-.hero__code-img {
-  width: 80px; /* سایز دسکتاپ */
-  height: auto;
-}
-
-.hero__subtitle {
-  font-size: 1.5rem;
-  color: #64748b;
-  margin-top: 20px;
-}
-
-.hero__arrow {
-  margin-top: 40px;
-}
-
 .hero__arrow-img {
   max-width: 150px;
 }
 
-/* --- Media Queries --- */
-
-/* تبلت (Laptops & Tablets) */
-@media (max-width: 992px) {
-  .hero__title {
-    font-size: 3rem;
-  }
-  .hero__code-img {
-    width: 65px;
-  }
-}
-
-/* موبایل (Phones) */
 @media (max-width: 768px) {
   .hero {
     padding: 50px 0;
   }
 
   .hero__title {
-    font-size: 2.2rem; /* کوچک‌تر کردن تیتر برای جا شدن در عرض گوشی */
+    font-size: 1.5rem;
     line-height: 1.4;
     gap: 10px;
   }
 
   .hero__code-img {
-    width: 50px; /* کوچک کردن آیکون کد */
+    width: 38.65px;
+    height: 55px;
   }
 
   .hero__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.27rem;
     padding: 0 20px;
   }
 
   .hero__arrow-img {
-    max-width: 100px; /* کوچک کردن تصویر فلش */
-    transform: rotate(10deg); /* کمی چرخش برای فیت شدن بهتر (اختیاری) */
+    max-width: 100px;
+    transform: rotate(10deg);
   }
 }
 
-/* گوشی‌های خیلی کوچک */
-@media (max-width: 480px) {
-  .hero__title {
-    font-size: 1.8rem;
-  }
-  
-  .hero__code-img {
-    width: 40px;
+@media (max-width: 768px) {
+  .menu-text {
+    display: none !important;
   }
 
-  .hero__subtitle {
-    font-size: 1rem;
+  .header {
+    padding-top: 20px;
+    height: auto;
   }
 }
-
